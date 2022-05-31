@@ -1,20 +1,24 @@
 const { Schema, model } =  require('mongoose');
 
 const schemaPublicaciones = new Schema({
-    titulo:{
+    idUsuario:{
         type:String,
         required: true
     },
     descripcion:{
         type:String,
-        required: true
+        default: ""
     },
     reacciones:{
         type:Array,
         default: []
     },
+    comentarios:{
+        type:Array,
+        default: []
+    },
     media:{
-        type: String,
+        type: Array,
         default: null
     },
     created_at:{
@@ -27,4 +31,4 @@ const schemaPublicaciones = new Schema({
     }
 })
 
-module.exports = model('Eventos', schemaEventos);
+module.exports = model('Publicaciones', schemaPublicaciones);

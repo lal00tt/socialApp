@@ -40,7 +40,7 @@ const App = () => {
         <LoginPage />
       </Route>      
       <Route path='/inicio' >
-        <InicioPage user={user}/>
+        <InicioPage user={user} setUser={setUser}/>
       </Route>      
     </main>
   )

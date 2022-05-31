@@ -4,7 +4,7 @@ import NavBar from '../Components/NavBar'
 import Header from '../Components/Header'
 import Content from '../Components/Content'
 
-const Inicio = ({ user }) => {
+const Inicio = ({ user, setUser }) => {
     const [ location, setLocation ] = useLocation()
 
     if (!user) {
@@ -14,7 +14,7 @@ const Inicio = ({ user }) => {
 
     return(
         <section className='w-full h-full bg-white custom-grid'>
-            <NavBar user={user}></NavBar>
+            <NavBar user={user} setUser={setUser} />
             <Header user={user}/>
             <Content user={user}/>
         </section>

@@ -5,12 +5,12 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const routes = require('./Routes/index')
 
-    const corsOptions = {
+const corsOptions = {
     origin: '*',
     optionsStatusSuccess: 200
 }
 
-try{
+try {
     mongoose.connect(
         'mongodb://localhost:27017/socialApp',
         {
@@ -21,7 +21,7 @@ try{
             console.log('Conexion satisfactoria de la base de datos')
         }
     )
-}catch(e){
+} catch (e) {
     console.log(e)
 }
 
@@ -36,6 +36,6 @@ app.use('/', (req, res) => {
     res.send('Bienvenido a Api 1.0')
 })
 
-app.listen(3001,()=>{
+app.listen(3001, () => {
     console.log('Servidor iniciado correctamente')
 })
