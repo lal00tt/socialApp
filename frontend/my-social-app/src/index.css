@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    label{
+        @apply text-white
+    }
+
+    input{
+        @apply rounded focus:outline-none p-2
+    }
+
+    button{
+        @apply px-4 py-2 rounded bg-orange-500 max-w-max font-semibold text-white
+    }
+    
+}
+
+.custom-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px  repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.custom-grid > .nav{
+    grid-area: 1 / 1 / 6 / 2;
+}
+.custom-grid > .head{
+    grid-area: 1 / 2 / 2 / 6;
+}
+.custom-grid > .content{
+    grid-area: 2 / 2 / 6 / 6;
+}
