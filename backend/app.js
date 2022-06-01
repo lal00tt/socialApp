@@ -12,6 +12,7 @@ const corsOptions = {
 
 try {
     mongoose.connect(
+        //Cambiar respectivamente
         'mongodb://localhost:27017/socialApp',
         {
             useNewUrlParser: true,
